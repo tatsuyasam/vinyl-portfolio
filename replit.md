@@ -3,12 +3,13 @@
 ## Overview
 A high-end SvelteKit portfolio website inspired by Unveil.fr, featuring dark luxury aesthetics, smooth inertia scrolling, GSAP animations, and cinematic visual effects.
 
-**Last Updated:** October 28, 2025
+**Last Updated:** October 29, 2025
 
 ## Current State
 - ✅ Fully functional SvelteKit application with TypeScript
 - ✅ Dark theme with elegant typography
-- ✅ Smooth Lenis scrolling implementation
+- ✅ Instant scroll response (Lenis with 0 delay)
+- ✅ Diagonal scrolling vinyl record collection
 - ✅ GSAP-powered scroll animations
 - ✅ Magnetic cursor with hover morphing
 - ✅ Hero, Projects, About, and Contact sections
@@ -40,8 +41,8 @@ src/
 └── lib/
     └── components/
         ├── Hero.svelte         # Hero section with zoom animation
-        ├── Projects.svelte     # Projects gallery with diagonal cards
-        ├── ProjectCard.svelte  # Individual project card
+        ├── Projects.svelte     # Vinyl collection with diagonal scroll
+        ├── VinylRecord.svelte  # Individual vinyl record component
         ├── About.svelte        # About section
         ├── Contact.svelte      # Contact links section
         └── MagneticCursor.svelte  # Custom magnetic cursor
@@ -58,24 +59,29 @@ src/
 
 ### Animations
 - **Hero Section:** Fade-in + zoom animation, animated scroll cue
-- **Projects:** Diagonal/angled card layout with hover scale, glow, and overlay reveal
+- **Vinyl Records:** Diagonal scrolling that glides across screen as you scroll, with rotation and scale hover effects
 - **Scroll Animations:** GSAP ScrollTrigger for fade/slide on section entrance
 - **Page Transitions:** Smooth opacity transitions between routes
 - **Magnetic Cursor:** Morphs size and opacity on hover over interactive elements
+- **Instant Scroll Response:** Lenis configured with 0 delay for immediate feedback
 
 ### Interactive Elements
-- Smooth inertia scrolling (Lenis)
-- Hover effects on project cards
+- Instant scroll response (Lenis duration: 0)
+- Diagonal scrolling vinyl collection
+- Hover effects on vinyl records (scale + rotation)
+- Realistic vinyl design with grooves, center label, and hole
 - Animated underline on contact links
 - Click-through to project detail pages
 - Back button with fade transition
 
-## Sample Projects
-The portfolio includes 4 sample projects:
-1. **Cinematic Brand Experience** - Web Design
-2. **Luxury E-Commerce** - Development
-3. **Immersive Portfolio** - Creative Direction
-4. **Motion Graphics Studio** - Animation
+## Sample Music Collection
+The portfolio includes 6 sample vinyl records:
+1. **Midnight Jazz** - Album · 2024
+2. **Neon Dreams** - EP · 2024
+3. **Cosmic Flow** - Single · 2023
+4. **Urban Pulse** - Album · 2023
+5. **Velvet Sunrise** - EP · 2023
+6. **Electric Soul** - Single · 2024
 
 ## Development
 
@@ -99,6 +105,14 @@ npm run preview  # Preview production build
 - Grid layouts adapt from 1 column (mobile) to 2 columns (desktop)
 
 ## Recent Changes
+- **2025-10-29:** Vinyl record browsing experience with diagonal scrolling
+  - Reduced Lenis scroll delay to 0 for instant response
+  - Replaced project cards with realistic vinyl record design
+  - Implemented diagonal scrolling animation that glides vinyls across screen
+  - Fixed hover rotation to use absolute values (prevents drift)
+  - Enhanced scroll offset for more dramatic diagonal movement
+  - Updated section title to "Music Collection"
+  
 - **2025-10-28:** Initial project creation with all core features
   - SvelteKit project scaffolding
   - TailwindCSS and GSAP integration
